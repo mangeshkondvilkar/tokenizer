@@ -1,0 +1,54 @@
+swagger: '2.0'
+host: api.tokenizer.com
+schemes:
+- http
+info:
+  version: 0.0.1
+  title: UOB Tokenizer API
+definitions:
+  QUERYRESPONSE:
+    type: object
+    properties:
+      status:
+        type: string
+      mask-text:
+        type: string
+  QUERYRESPONSENOTFOUND:
+    type: object
+    properties:
+      status:
+        type: string
+parameters:
+  TOKEN:
+    name: text
+    in: query
+    required: true
+    type: string
+paths:
+  /tokenizer/query:
+    get:
+      tags:
+      - uob-tokenizer-query
+      summary: Get MaskText for a given token
+      description: Returns the JOSN object with status and mask-text in accordance with the query parameter.
+      produces:
+      - application/json
+      parameters:
+      - $ref: '#/parameters/TOKEN'
+      responses:
+        '200':
+          description: OK
+          schema:
+            type: object
+            description: Query response with status and mask-text for a given token.
+            properties:
+              queryResponse:
+                $ref: '#/definitions/QUERYRESPONSE'
+        '404':
+          description: NOT FOUND
+          schema:
+            type: object
+            description: Query response with status 'not-found' for a given token.
+            properties:
+              queryResponse:
+                $ref: '#/definitions/QUERYRESPONSENOTFOUND'

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<dataAnonymization>
+    <requestHeader>
+        <requesterContext>
+            <loginGroup>dummyLoginGroup</loginGroup>
+            <loginID>dummyLoginID</loginID>
+            <sourceSystem>RIMS</sourceSystem>
+            <targetSystem>PAT</targetSystem>
+            <requestID>dummyRequestID</requestID>
+        </requesterContext>
+    </requestHeader>
+    <requestDetails>
+        <portfolioRequestDetails>
+            <requestorID>dummyRequestorID</requestorID>
+            <cifNumber>10000016</cifNumber>
+            <customerEntityNumber>10000017</customerEntityNumber>
+            <custoemrRiskProfileDate>2018-04-22</custoemrRiskProfileDate>
+            <listPortfolioHoldinginfo>
+                <importPosition>
+                    <ticker>
+                        <type>FUND</type>
+                        <assetClass>assetClass</assetClass>
+                        <contractNumber>UNI123</contractNumber>
+                        <contractSize>contractSize</contractSize>
+                        <aleternateCurrency>USD</aleternateCurrency>
+                    </ticker>
+                    <sourceData>sourceData</sourceData>
+                    <units>12345.22</units>
+                    <initialQuantity>4542</initialQuantity>
+                    <accruedDividendReinvestUnits>123</accruedDividendReinvestUnits>
+                    <accruedInterestInBaseCurrency>EUR</accruedInterestInBaseCurrency>
+                    <valueDate>2018-04-21</valueDate>
+                    <tenor>1222</tenor>
+                </importPosition>
+            </listPortfolioHoldinginfo>
+        </portfolioRequestDetails>
+    </requestDetails>
+</dataAnonymization>
